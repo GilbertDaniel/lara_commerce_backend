@@ -53,15 +53,16 @@ Route::get('/categories',[CategoryController::class, 'getCategories']);
 
 //Products Route
 Route::get('/search/{search}',[ProductController::class, 'getSearchProducts']);
-
-
 Route::get('/products',[ProductController::class, 'getProducts']);
 Route::get('/products/{remark}',[ProductController::class, 'getProductsByRemark']);
 Route::get('/products/category/{category}',[ProductController::class, 'getProductsByCategory']);
 Route::get('/products/category/sub/{category}/{subcategory}',[ProductController::class, 'getProductsBySubCategory']);
 Route::get('/products/detail/{id}',[ProductDetailsController::class, 'getProductDetails']);
+
 // Similar Product Route
 Route::get('/similar/{subcategory}',[ProductController::class, 'SimilarProduct']);
+// Product Review Route
+Route::get('/reviewlist/{id}',[ReviewController::class, 'ReviewList']);
 
 
 // Notification Route
