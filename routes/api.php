@@ -60,6 +60,8 @@ Route::get('/products/{remark}',[ProductController::class, 'getProductsByRemark'
 Route::get('/products/category/{category}',[ProductController::class, 'getProductsByCategory']);
 Route::get('/products/category/sub/{category}/{subcategory}',[ProductController::class, 'getProductsBySubCategory']);
 Route::get('/products/detail/{id}',[ProductDetailsController::class, 'getProductDetails']);
+// Similar Product Route
+Route::get('/similar/{subcategory}',[ProductController::class, 'SimilarProduct']);
 
 
 // Notification Route
